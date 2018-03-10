@@ -1,9 +1,11 @@
-#  RxSwiftDo
+# RxSwiftDo
 
-[![License](http://img.shields.io/badge/License-MIT-green.svg?style=flat)](https://github.com/tokijh/RxSwiftDo/blob/master/LICENSE)
 [![Swift 4](https://img.shields.io/badge/swift-4.0-orange.svg?style=flat)](https://swift.org)
+[![Version](https://img.shields.io/cocoapods/v/RxSwiftDo.svg?style=flat)](http://cocoapods.org/pods/RxSwiftDo)
+[![License](https://img.shields.io/cocoapods/l/RxSwiftDo.svg?style=flat)](http://cocoapods.org/pods/RxSwiftDo)
+[![Platform](https://img.shields.io/cocoapods/p/RxSwiftDo.svg?style=flat)](http://cocoapods.org/pods/RxSwiftDo)
 
-Simplified `Observable.do(onNext, onError ...)` to `Observable.do(on: Event<Value>)` like `subscribe`
+Simplified `Observable.do(onNext, onError ...)` to `Observable.do(on: Event<Value>)` like `Observable.subscribe(on: Event<Value>)`
 
 ## Detail
 
@@ -48,8 +50,18 @@ enum Event<Element> {
 }
 ```
 
+## Installation
+
+RxSwiftDo is available through [CocoaPods](http://cocoapods.org). To install
+it, simply add the following line to your Podfile:
+
+```ruby
+pod 'RxSwiftDo'
+```
+
 ## Author
 [tokijh](https://github.com/tokijh)
 
 ## License
-RxSwift MVVM TableView is available under the MIT License See the [LICENSE](LICENSE) file for more info.
+RxSwiftDo is available under the MIT License See the [LICENSE](LICENSE) file for more info.
+
