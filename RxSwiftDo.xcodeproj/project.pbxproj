@@ -8,12 +8,21 @@
 
 /* Begin PBXBuildFile section */
 		604E970620545C0E004EFD97 /* RxSwiftDo.h in Headers */ = {isa = PBXBuildFile; fileRef = 604E970420545C0E004EFD97 /* RxSwiftDo.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		604E970D20545C21004EFD97 /* Do.swift in Sources */ = {isa = PBXBuildFile; fileRef = 604E970C20545C21004EFD97 /* Do.swift */; };
+		A39575DA4D9EF61E306B2835 /* Pods_RxSwiftDo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C7935D65C5832178CC266C3 /* Pods_RxSwiftDo.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0C7935D65C5832178CC266C3 /* Pods_RxSwiftDo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RxSwiftDo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		604E970120545C0E004EFD97 /* RxSwiftDo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = RxSwiftDo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		604E970420545C0E004EFD97 /* RxSwiftDo.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RxSwiftDo.h; sourceTree = "<group>"; };
 		604E970520545C0E004EFD97 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		604E970C20545C21004EFD97 /* Do.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Do.swift; sourceTree = "<group>"; };
+		7C2A3E3E2951ECCDD24282A2 /* Pods-RxSwiftDoExample.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RxSwiftDoExample.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RxSwiftDoExample/Pods-RxSwiftDoExample.debug.xcconfig"; sourceTree = "<group>"; };
+		7C6B6F5BB8BF964F9EBFD6E2 /* Pods-RxSwiftDo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RxSwiftDo.release.xcconfig"; path = "Pods/Target Support Files/Pods-RxSwiftDo/Pods-RxSwiftDo.release.xcconfig"; sourceTree = "<group>"; };
+		7D6866DEE9CF05110ECA2504 /* Pods-RxSwiftDo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RxSwiftDo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RxSwiftDo/Pods-RxSwiftDo.debug.xcconfig"; sourceTree = "<group>"; };
+		A6CD88A05B299F3B42757820 /* Pods-RxSwiftDoExample.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RxSwiftDoExample.release.xcconfig"; path = "Pods/Target Support Files/Pods-RxSwiftDoExample/Pods-RxSwiftDoExample.release.xcconfig"; sourceTree = "<group>"; };
+		E43E248F2FD55C92BE2B0706 /* Pods_RxSwiftDoExample.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RxSwiftDoExample.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -21,17 +30,31 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A39575DA4D9EF61E306B2835 /* Pods_RxSwiftDo.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0A5F8A6C6F5084D20863D978 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				7D6866DEE9CF05110ECA2504 /* Pods-RxSwiftDo.debug.xcconfig */,
+				7C6B6F5BB8BF964F9EBFD6E2 /* Pods-RxSwiftDo.release.xcconfig */,
+				7C2A3E3E2951ECCDD24282A2 /* Pods-RxSwiftDoExample.debug.xcconfig */,
+				A6CD88A05B299F3B42757820 /* Pods-RxSwiftDoExample.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		604E96F720545C0E004EFD97 = {
 			isa = PBXGroup;
 			children = (
 				604E970320545C0E004EFD97 /* RxSwiftDo */,
 				604E970220545C0E004EFD97 /* Products */,
+				0A5F8A6C6F5084D20863D978 /* Pods */,
+				FEA50517B62546D7DED0F1D2 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -48,8 +71,18 @@
 			children = (
 				604E970420545C0E004EFD97 /* RxSwiftDo.h */,
 				604E970520545C0E004EFD97 /* Info.plist */,
+				604E970C20545C21004EFD97 /* Do.swift */,
 			);
 			path = RxSwiftDo;
+			sourceTree = "<group>";
+		};
+		FEA50517B62546D7DED0F1D2 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				0C7935D65C5832178CC266C3 /* Pods_RxSwiftDo.framework */,
+				E43E248F2FD55C92BE2B0706 /* Pods_RxSwiftDoExample.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -70,10 +103,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 604E970920545C0E004EFD97 /* Build configuration list for PBXNativeTarget "RxSwiftDo" */;
 			buildPhases = (
+				B0005516AF0E9532BB4F4859 /* [CP] Check Pods Manifest.lock */,
 				604E96FC20545C0E004EFD97 /* Sources */,
 				604E96FD20545C0E004EFD97 /* Frameworks */,
 				604E96FE20545C0E004EFD97 /* Headers */,
 				604E96FF20545C0E004EFD97 /* Resources */,
+				FC36639FE879A04D42BD4E16 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -90,11 +125,13 @@
 		604E96F820545C0E004EFD97 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				LastSwiftUpdateCheck = 0920;
 				LastUpgradeCheck = 0920;
 				ORGANIZATIONNAME = "윤중현";
 				TargetAttributes = {
 					604E970020545C0E004EFD97 = {
 						CreatedOnToolsVersion = 9.2;
+						LastSwiftMigration = 0920;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -105,6 +142,7 @@
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
+				Base,
 			);
 			mainGroup = 604E96F720545C0E004EFD97;
 			productRefGroup = 604E970220545C0E004EFD97 /* Products */;
@@ -126,11 +164,48 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		B0005516AF0E9532BB4F4859 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-RxSwiftDo-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FC36639FE879A04D42BD4E16 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-RxSwiftDo/Pods-RxSwiftDo-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		604E96FC20545C0E004EFD97 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				604E970D20545C21004EFD97 /* Do.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -252,7 +327,9 @@
 		};
 		604E970A20545C0E004EFD97 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7D6866DEE9CF05110ECA2504 /* Pods-RxSwiftDo.debug.xcconfig */;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
@@ -266,6 +343,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = tokijh.com.RxSwiftDo;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -273,7 +351,9 @@
 		};
 		604E970B20545C0E004EFD97 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7C6B6F5BB8BF964F9EBFD6E2 /* Pods-RxSwiftDo.release.xcconfig */;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
