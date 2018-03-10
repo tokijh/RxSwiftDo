@@ -51,7 +51,7 @@
 		604E96F720545C0E004EFD97 = {
 			isa = PBXGroup;
 			children = (
-				604E970320545C0E004EFD97 /* RxSwiftDo */,
+				604E970320545C0E004EFD97 /* Source */,
 				604E970220545C0E004EFD97 /* Products */,
 				0A5F8A6C6F5084D20863D978 /* Pods */,
 				FEA50517B62546D7DED0F1D2 /* Frameworks */,
@@ -66,14 +66,14 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		604E970320545C0E004EFD97 /* RxSwiftDo */ = {
+		604E970320545C0E004EFD97 /* Source */ = {
 			isa = PBXGroup;
 			children = (
 				604E970420545C0E004EFD97 /* RxSwiftDo.h */,
 				604E970520545C0E004EFD97 /* Info.plist */,
 				604E970C20545C21004EFD97 /* Do.swift */,
 			);
-			path = RxSwiftDo;
+			path = Source;
 			sourceTree = "<group>";
 		};
 		FEA50517B62546D7DED0F1D2 /* Frameworks */ = {
