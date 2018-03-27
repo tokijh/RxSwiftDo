@@ -37,7 +37,6 @@ public extension ObservableType {
     /**
      Invokes filtered event handler to an observable sequence.
      
-     
      - parameter events: Listener event type
      - parameter on: Action to invoke for filtered event in the observable sequence.
      - returns: The source sequence with the side-effecting behavior applied.
@@ -61,12 +60,12 @@ public enum Event<Element> {
 
 /// Event Filter Type
 public enum EventFilter {
-    case next
-    case error
-    case completed
-    case subscribe
-    case subscribed
-    case dispose
+    case next  // Action to invoke for each element in the observable sequence.
+    case error   // Action to invoke upon errored termination of the observable sequence.
+    case completed      // Action to invoke upon graceful termination of the observable sequence.
+    case subscribe      // Action to invoke before subscribing to source observable sequence.
+    case subscribed     // Action to invoke after subscribing to source observable sequence.
+    case dispose        // Action to invoke after subscription to source observable has been disposed for any reason. It can be either because sequence terminates for some reason or observer subscription being disposed.
 }
 
 extension Event: CustomDebugStringConvertible {
