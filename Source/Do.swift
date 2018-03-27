@@ -14,7 +14,7 @@ public extension ObservableType {
      
      - seealso: [do operator on reactivex.io](http://reactivex.io/documentation/operators/do.html)
      
-     - parameter onNext: Action to invoke for each event in the observable sequence.
+     - parameter on: Action to invoke for each event in the observable sequence.
      - returns: The source sequence with the side-effecting behavior applied.
      */
     public func `do`(on: @escaping (Event<Self.E>) -> Swift.Void) -> Observable<E> {
@@ -33,6 +33,20 @@ public extension ObservableType {
                 on(Event<`Self`.E>.dispose)
             })
     }
+    
+    /**
+     Invokes filtered event handler to an observable sequence.
+     
+     
+     - parameter events: Listener event type
+     - parameter on: Action to invoke for filtered event in the observable sequence.
+     - returns: The source sequence with the side-effecting behavior applied.
+     */
+    public func `do`(events: [EventFilter], on: @escaping (Event<Self.E>) -> Swift.Void) -> Observable<E> {
+        return self.do { e in
+            if events.contains(where: { $0 == e }) { on(e) }
+        }
+    }
 }
 
 /// Represents a sequence event.
@@ -43,6 +57,16 @@ public enum Event<Element> {
     case subscribe      // Action to invoke before subscribing to source observable sequence.
     case subscribed     // Action to invoke after subscribing to source observable sequence.
     case dispose        // Action to invoke after subscription to source observable has been disposed for any reason. It can be either because sequence terminates for some reason or observer subscription being disposed.
+}
+
+/// Event Filter Type
+public enum EventFilter {
+    case next
+    case error
+    case completed
+    case subscribe
+    case subscribed
+    case dispose
 }
 
 extension Event: CustomDebugStringConvertible {
@@ -56,6 +80,34 @@ extension Event: CustomDebugStringConvertible {
         case .subscribed: return "subscribed"
         case .dispose: return "dispose"
         }
+    }
+}
+
+extension Event {
+    static func == (lhs: Event, rhs: Event) -> Bool {
+        switch lhs {
+        case .subscribe: return rhs.isSubscribe
+        case .subscribed: return rhs.isSubscribed
+        case .next: return rhs.isNext
+        case .error: return rhs.isError
+        case .completed: return rhs.isCompleted
+        case .dispose: return rhs.isDispose
+        }
+    }
+    
+    static func == (lhs: EventFilter, rhs: Event) -> Bool {
+        switch lhs {
+        case .subscribe: return rhs.isSubscribe
+        case .subscribed: return rhs.isSubscribed
+        case .next: return rhs.isNext
+        case .error: return rhs.isError
+        case .completed: return rhs.isCompleted
+        case .dispose: return rhs.isDispose
+        }
+    }
+    
+    static func == (lhs: Event, rhs: EventFilter) -> Bool {
+        return rhs == lhs
     }
 }
 
@@ -82,6 +134,22 @@ extension Event {
             return error
         }
         return nil
+    }
+    
+    /// If `next` event, returns true.
+    public var isNext: Bool {
+        if case .next = self {
+            return true
+        }
+        return false
+    }
+    
+    /// If `error` event, returns true.
+    public var isError: Bool {
+        if case .error = self {
+            return true
+        }
+        return false
     }
     
     /// If `completed` event, returns true.
