@@ -17,9 +17,18 @@ Simplified `Observable.do(onNext, onError ...)` to `Observable.do(on: Event<Valu
 
 OR
 
-.do (on: { (event: Event<Value>) in
+.do(on: { (event: Event<Value>) in
     print(event)
 })
+
+Add filter Event
+
+.do(events: [.next, .error], on: { (event: Event<Value>) in
+    print(event)
+})
+.do(events: [.subscribe, .subscribed]) { (event: Event<Value>) in
+    print(event)
+}
 ```
  **Previous**
 ```
@@ -43,6 +52,17 @@ OR
 enum Event<Element> {
     case next(Element)  // Action to invoke for each element in the observable sequence.
     case error(Error)   // Action to invoke upon errored termination of the observable sequence.
+    case completed      // Action to invoke upon graceful termination of the observable sequence.
+    case subscribe      // Action to invoke before subscribing to source observable sequence.
+    case subscribed     // Action to invoke after subscribing to source observable sequence.
+    case dispose        // Action to invoke after subscription to source observable has been disposed for any reason. It can be either because sequence terminates for some reason or observer subscription being disposed.
+}
+```
+### EventFilter
+```
+enum EventFilter {
+    case next  // Action to invoke for each element in the observable sequence.
+    case error   // Action to invoke upon errored termination of the observable sequence.
     case completed      // Action to invoke upon graceful termination of the observable sequence.
     case subscribe      // Action to invoke before subscribing to source observable sequence.
     case subscribed     // Action to invoke after subscribing to source observable sequence.
