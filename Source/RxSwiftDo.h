@@ -6,7 +6,7 @@
 //  Copyright © 2018년 윤중현. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
+#import <Foundation/Foundation.h>
 
 //! Project version number for RxSwiftDo.
 FOUNDATION_EXPORT double RxSwiftDoVersionNumber;
