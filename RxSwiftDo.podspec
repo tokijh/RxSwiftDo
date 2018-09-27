@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name             = "RxSwiftDo"
-  s.version          = "1.2"
+  s.version          = "1.2.1"
   s.summary          = "RxSwiftDo can use Obserable.do simply"
   s.homepage         = "https://github.com/tokijh/RxSwiftDo"
   s.license          = { :type => "MIT", :file => "LICENSE" }
