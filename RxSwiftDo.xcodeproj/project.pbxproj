@@ -168,6 +168,7 @@
 				60259D63215C84B3001D15AA /* DoTests.swift */,
 				60259D6D215C84FF001D15AA /* iOS */,
 				60259D82215CA2E6001D15AA /* Mac */,
+				60259D9C215CAF57001D15AA /* tvOS */,
 				60259D65215C84B3001D15AA /* Info.plist */,
 			);
 			path = Tests;
@@ -185,6 +186,13 @@
 			children = (
 			);
 			path = Mac;
+			sourceTree = "<group>";
+		};
+		60259D9C215CAF57001D15AA /* tvOS */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = tvOS;
 			sourceTree = "<group>";
 		};
 		604E96F720545C0E004EFD97 = {
