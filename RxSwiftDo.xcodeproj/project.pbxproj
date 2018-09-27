@@ -22,6 +22,10 @@
 		60259D86215CA3B8001D15AA /* Do.swift in Sources */ = {isa = PBXBuildFile; fileRef = 604E970C20545C21004EFD97 /* Do.swift */; };
 		60259D87215CA3E5001D15AA /* Do.swift in Sources */ = {isa = PBXBuildFile; fileRef = 604E970C20545C21004EFD97 /* Do.swift */; };
 		60259D88215CA400001D15AA /* RxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 60259D27215C7E21001D15AA /* RxSwift.framework */; };
+		60259D92215CA480001D15AA /* RxSwiftDo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 60259D2E215C8002001D15AA /* RxSwiftDo.framework */; };
+		60259D99215CA4D6001D15AA /* RxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 60259D37215C8105001D15AA /* RxSwift.framework */; };
+		60259D9A215CA4E6001D15AA /* Do.swift in Sources */ = {isa = PBXBuildFile; fileRef = 604E970C20545C21004EFD97 /* Do.swift */; };
+		60259D9B215CA4E6001D15AA /* DoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60259D63215C84B3001D15AA /* DoTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,6 +43,13 @@
 			remoteGlobalIDString = 60259D1B215C7D80001D15AA;
 			remoteInfo = "RxSwiftDo-Mac";
 		};
+		60259D93215CA480001D15AA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 604E96F820545C0E004EFD97 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 60259D2D215C8002001D15AA;
+			remoteInfo = "RxSwiftDo-tvOS";
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
@@ -54,6 +65,7 @@
 		60259D63215C84B3001D15AA /* DoTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoTests.swift; sourceTree = "<group>"; };
 		60259D65215C84B3001D15AA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		60259D77215CA2DD001D15AA /* RxSwiftDoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RxSwiftDoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		60259D8D215CA480001D15AA /* RxSwiftDoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RxSwiftDoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		604E970420545C0E004EFD97 /* RxSwiftDo.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RxSwiftDo.h; sourceTree = "<group>"; };
 		604E970520545C0E004EFD97 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		604E970C20545C21004EFD97 /* Do.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Do.swift; sourceTree = "<group>"; };
@@ -107,6 +119,15 @@
 			files = (
 				60259D88215CA400001D15AA /* RxSwift.framework in Frameworks */,
 				60259D7C215CA2DD001D15AA /* RxSwiftDo.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		60259D8A215CA480001D15AA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				60259D99215CA4D6001D15AA /* RxSwift.framework in Frameworks */,
+				60259D92215CA480001D15AA /* RxSwiftDo.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -185,6 +206,7 @@
 				60259D4D215C8296001D15AA /* RxSwiftDo.framework */,
 				60259D61215C84B3001D15AA /* RxSwiftDoTests.xctest */,
 				60259D77215CA2DD001D15AA /* RxSwiftDoTests.xctest */,
+				60259D8D215CA480001D15AA /* RxSwiftDoTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -362,6 +384,25 @@
 			productReference = 60259D77215CA2DD001D15AA /* RxSwiftDoTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
+		60259D8C215CA480001D15AA /* RxSwiftDoTests-tvOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 60259D95215CA480001D15AA /* Build configuration list for PBXNativeTarget "RxSwiftDoTests-tvOS" */;
+			buildPhases = (
+				60259D89215CA480001D15AA /* Sources */,
+				60259D8A215CA480001D15AA /* Frameworks */,
+				60259D8B215CA480001D15AA /* Resources */,
+				60259D98215CA4B6001D15AA /* Carthage */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				60259D94215CA480001D15AA /* PBXTargetDependency */,
+			);
+			name = "RxSwiftDoTests-tvOS";
+			productName = "RxSwiftDoTests-tvOS";
+			productReference = 60259D8D215CA480001D15AA /* RxSwiftDoTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -396,6 +437,10 @@
 						CreatedOnToolsVersion = 10.0;
 						ProvisioningStyle = Automatic;
 					};
+					60259D8C215CA480001D15AA = {
+						CreatedOnToolsVersion = 10.0;
+						ProvisioningStyle = Automatic;
+					};
 				};
 			};
 			buildConfigurationList = 604E96FB20545C0E004EFD97 /* Build configuration list for PBXProject "RxSwiftDo" */;
@@ -417,6 +462,7 @@
 				60259D4C215C8296001D15AA /* RxSwiftDo-watchOS */,
 				60259D60215C84B3001D15AA /* RxSwiftDoTests-iOS */,
 				60259D76215CA2DD001D15AA /* RxSwiftDoTests-Mac */,
+				60259D8C215CA480001D15AA /* RxSwiftDoTests-tvOS */,
 			);
 		};
 /* End PBXProject section */
@@ -458,6 +504,13 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		60259D75215CA2DD001D15AA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		60259D8B215CA480001D15AA /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -581,6 +634,25 @@
 			shellPath = /bin/sh;
 			shellScript = "/usr/local/bin/carthage copy-frameworks\n";
 		};
+		60259D98215CA4B6001D15AA /* Carthage */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"$(SRCROOT)/Carthage/Build/tvOS/RxSwift.framework",
+			);
+			name = Carthage;
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "/usr/local/bin/carthage copy-frameworks\n";
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -633,6 +705,15 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		60259D89215CA480001D15AA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				60259D9A215CA4E6001D15AA /* Do.swift in Sources */,
+				60259D9B215CA4E6001D15AA /* DoTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -645,6 +726,11 @@
 			isa = PBXTargetDependency;
 			target = 60259D1B215C7D80001D15AA /* RxSwiftDo-Mac */;
 			targetProxy = 60259D7D215CA2DD001D15AA /* PBXContainerItemProxy */;
+		};
+		60259D94215CA480001D15AA /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 60259D2D215C8002001D15AA /* RxSwiftDo-tvOS */;
+			targetProxy = 60259D93215CA480001D15AA /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -975,6 +1061,49 @@
 			};
 			name = Release;
 		};
+		60259D96215CA480001D15AA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 46KGHHF73Q;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/tvOS",
+				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = tokijh.com.RxSwiftDoTests;
+				PRODUCT_NAME = RxSwiftDoTests;
+				SDKROOT = appletvos;
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = 3;
+				TVOS_DEPLOYMENT_TARGET = 12.0;
+			};
+			name = Debug;
+		};
+		60259D97215CA480001D15AA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 46KGHHF73Q;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/tvOS",
+				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = tokijh.com.RxSwiftDoTests;
+				PRODUCT_NAME = RxSwiftDoTests;
+				SDKROOT = appletvos;
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = 3;
+				TVOS_DEPLOYMENT_TARGET = 12.0;
+			};
+			name = Release;
+		};
 		604E970720545C0E004EFD97 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -1145,6 +1274,15 @@
 			buildConfigurations = (
 				60259D80215CA2DD001D15AA /* Debug */,
 				60259D81215CA2DD001D15AA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		60259D95215CA480001D15AA /* Build configuration list for PBXNativeTarget "RxSwiftDoTests-tvOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				60259D96215CA480001D15AA /* Debug */,
+				60259D97215CA480001D15AA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
