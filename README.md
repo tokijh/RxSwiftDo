@@ -8,7 +8,7 @@
 Simplified `Observable.do(onNext, onError ...)` to `Observable.do(on: Event<Value>)` like `Observable.subscribe(on: Event<Value>)`
 
 ## Notice
-> Version 2.1.2
+> Version 1.2.2
 * **SUPPORT SWIFT 4.2**
 * Support Carthage
 
