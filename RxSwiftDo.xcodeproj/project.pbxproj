@@ -68,6 +68,13 @@
 			path = Mac;
 			sourceTree = "<group>";
 		};
+		60259D3A215C825E001D15AA /* tvOS */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = tvOS;
+			sourceTree = "<group>";
+		};
 		604E96F720545C0E004EFD97 = {
 			isa = PBXGroup;
 			children = (
@@ -93,6 +100,7 @@
 				604E970420545C0E004EFD97 /* RxSwiftDo.h */,
 				60259D14215C7CB8001D15AA /* iOS */,
 				60259D24215C7D84001D15AA /* Mac */,
+				60259D3A215C825E001D15AA /* tvOS */,
 				604E970520545C0E004EFD97 /* Info.plist */,
 				604E970C20545C21004EFD97 /* Do.swift */,
 			);
